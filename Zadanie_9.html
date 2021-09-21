@@ -9,23 +9,21 @@ var liczba1=prompt("D1_Ban=","");
 
 var liczba2=prompt("D2_Ban=","");
 
-var liczba3 = liczba1 - liczba2;
+var liczba3=prompt("G1_Ban=","");
 
-var liczba3 = liczba3 * 86400 ;
+var liczba4=prompt("G2_Ban=","");
+
+var liczba5 = liczba1 - liczba2;
+
+var liczba6 = liczba5 * 86400 ;
+
+var liczba7 = liczba3 - liczba4;
+
+var liczba8 = liczba7 * 3600 ;
+
+var liczba9 = liczba8 + liczba6
  
-document.write(liczba1);
-
-document.write("<br>");
-
-document.write(liczba2);
-
-document.write("<br>");
-
-document.write(liczba3);
-
-document.write("<br>");
-
-document.write(liczba4);
+document.write("dzien 1: " + liczba1 + "<br>" + "dzien 2: " + liczba2 + "<br>" + "godz 1: " + liczba3 + "<br>" + "godz 2: " + liczba4 + "<br>" + "ilosc sekund: " + liczba9)
 </script>
 </div>
 </body>
