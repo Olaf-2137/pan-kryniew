@@ -10,9 +10,44 @@ function WinOpen_Zad2()
 {
 window.open("Zadanie_2.html","zadanie2","toolbar=no,directories=no,menubar=no,height=280,width=760,top=100,left=300");
 }
-function WinOpen()
+function WinOpen_Zad3()
 {
-window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+window.open("Zadanie_3.html","okienko","toolbar=no,directories=no,menubar=no,height=1000,width=1300,top=200,left=200");
+}
+
+function show_alert() 
+{ 
+alert("Uwaga!"); 
+}
+
+function show_confirm()
+{
+var r=confirm("Naciśnij klawisz");
+if (r==true)
+{ document.write("Nacisnąłeś OK!"); }
+else
+{ document.write("Nacisnąłeś Cancel!"); }
+
+}
+function show_prompt()
+{
+var name=prompt("Napisz imię","Imię Nazwisko");
+if (name!=null && name!="")
+{
+document.write("Witaj " + name + "! jak się masz?");
+}
+}
+function WinOpen_Zad7()
+{
+window.open("Zadanie_7.html","okienko","toolbar=no,directories=no,menubar=no,height=1000,width=1300,top=200,left=200");
+}
+function WinOpen_Zad8()
+{
+window.open("Zadanie_8.html","okienko","toolbar=no,directories=no,menubar=no,height=1000,width=1300,top=200,left=200");
+}
+function WinOpen_Zad9()
+{
+window.open("Zadanie_9.html","okienko","toolbar=no,directories=no,menubar=no,height=1000,width=1300,top=200,left=200");
 }
 </script>
 </head>
@@ -23,12 +58,14 @@ window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=
 <form>
 <input type="button" name="przycisk" value="Zadanie_1_Banach" onclick="WinOpen_zad1(' ')">
 <input type="button" name="przycisk" value="Zadanie_2_Banach" onclick="WinOpen_Zad2(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
-<input type="button" name="przycisk" value="Nowa Strona_Banach" onclick="WinOpen(' ')">
+<input type="button" name="przycisk" value="Zadanie_3_Banach" onclick="WinOpen_Zad3(' ')">
+<input type="button" onclick="show_alert()" value="Zadanie_4_Banach" />
+<input type="button" onclick="show_confirm()" value="Zadanie_5_Banach" />
+<input type="button" onclick="show_prompt()" value="Zadanie_6__Banach" />
+<input type="button" name="przycisk" value="Zadanie_7_Banach" onclick="WinOpen_Zad7(' ')">
+<input type="button" name="przycisk" value="Zadanie_8_Banach" onclick="WinOpen_Zad8(' ')">
+<input type="button" name="przycisk" value="Zadanie_9_Banach" onclick="WinOpen_Zad9(' ')">
+
 </form>
 </body>
 </html>
