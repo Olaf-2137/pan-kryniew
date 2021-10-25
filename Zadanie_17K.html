@@ -1,0 +1,46 @@
+<html>
+	<body>
+		<textarea rows="16" cols="133">
+			<!DOCTYPE html>
+            <html>
+                <head>
+                    <title> Użycie fukcji </title>
+                    <meta charset="utf-8">
+                </head>
+
+                <body>
+                      <div style="color:navy;font-size:50px;">
+            <script language="JavaScript">
+            var a = parseFloat(prompt("a = ", ""));
+            var b = parseFloat(prompt("b = ", ""));
+            function suma_ban(a, b) {
+            return a + b;
+            }
+            function odejmowanie_ban(a,b) {
+            return a - b;
+            }
+            function mnozenie_ban(a,b) {
+            return a * b;
+            }
+            function od_kwadratu_ban(a) {
+            return a*a;
+            }
+            function od_kwadratu_ban_v2(b) {
+            return b*b;
+            }
+            function reszta_z_dzielenia_a_przez_b_ban(a,b){
+            return a%=b;
+            }
+        document.write("Suma = " + suma_ban(a, b) + "<br>");
+        document.write("Odejmowanie = " + odejmowanie_ban(a, b) + "<br>");
+        document.write("Mnozenie = " + mnozenie_ban(a, b) + "<br>");
+        document.write("a do potegi 2 = " + od_kwadratu_ban(a) + "<br>");
+        document.write("b do potegi 2 = " + od_kwadratu_ban_v2(b) + "<br>");
+        document.write("Reszta z dzielenia a/b = " + reszta_z_dzielenia_a_przez_b_ban(a, b) + "<br>");
+        </script>
+    </div>
+                </body>
+            </html>
+		</textarea>
+	</body>
+</html>

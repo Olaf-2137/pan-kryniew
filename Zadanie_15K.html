@@ -1,0 +1,36 @@
+<html>
+	<body>
+		<textarea rows="16" cols="133">
+			<!DOCTYPE html>
+			<html>
+				<head>
+		
+				</head>
+				<body>
+					<div style="color:darkblue;font-size:35px;">
+						<script language="JavaScript">
+							var x1_ban = prompt("Liczba 1: ", "");
+					var x2_ban = prompt("Liczba 2: ", "");
+					var wynik1;
+					var wynik2;
+					var wynik3;
+					var d = 5/7;
+					var x1 = parseFloat(x1_ban);
+					var x2 = parseFloat(x2_ban);
+					wynik1 = 3*Math.pow(x1,(5/7));
+					wynik2 = (2*Math.cos(x1_ban*Math.PI/180))+(2*Math.sin(x1_ban*Math.PI/180));
+					wynik3 = Math.cbrt(Math.pow(x1_ban,5)+(2*Math.pow(x2_ban,4)))*Math.abs(x1_ban-x2_ban);
+					wynik1.toFixed(2);
+					wynik2.toFixed(2);
+					wynik3.toFixed(2);
+					document.write("x1 = " +x1_ban+ " ");
+					document.write("x2 = " +x2_ban+ " <br>");
+					document.write("y = 3*"+x1+"^(5/7) = "+wynik1+"<br>"); 
+					document.write("y1 = 2*cos"+x1+"+2sin"+x1+" = "+wynik2+"<br>");
+					document.write("y2 = "+wynik3+"<br>");
+						</script>
+				</body>
+			</html>
+		</textarea>
+	</body>
+</html>
