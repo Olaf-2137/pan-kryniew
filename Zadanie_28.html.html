@@ -1,0 +1,30 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function klient(Model_B,Kolor_B,Rok_B)//początek konstruktora
+{
+this.Model=Model_B;
+this.Kolor=Kolor_B;
+this.Rok=Rok_B;
+}//koniec konstruktora
+ klient.prototype.samochod = function () //definicja metody
+ {
+ alert(this.Model + ' ' + this.Kolor+ ' ' + this.Rok);
+ };
+var osoba1 = new klient("Rover ", "Czarny ", "2012 "); // nowy obiekt osoba1
+var osoba2 = new klient('Passat_Kombi ', 'Czarny ', '1999');
+osoba1.samochod(); // uruchomienie metody samochod() dotyczącej osoby 1
+osoba2.samochod();
+ document.write("oto klienci"+"<br>");
+// poniżej dostęp do pól osoby1
+ document.write("klient pierwszy"+" "+osoba1.Model+" "+osoba1.Kolor+" "+osoba1.Rok +"<br>");
+ document.write("klient drugi"+" "+osoba2.Model+" "+osoba2.Kolor+" "+osoba2.Rok);
+
+ </script>
+ </head>
+<body>
+<br><br>
+<br>
+ programowanie obiektowe
+</body>
+</html>
