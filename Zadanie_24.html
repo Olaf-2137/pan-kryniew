@@ -1,111 +1,81 @@
 <html>
     <title>Zadanie 24</title>
     <body>
-        1. W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z
-    przykładami)?<br>
-    Sposób 1<br>
-Używając zapisu postaci:<br>
-a)<br>
-nazwa_obiektu.nazwa_właściwości="tekst";  dla właściwości typu tekstowego<br>
-np.<br>
-auto.marka="Opel Omega";<br>
-b)<br>
-nazwa_obiektu.nazwa_właściwości=liczba;  dla właściwości typu liczbowego<br>
-np.<br>
-auto.rok=1996;<br>
-auto.cena=25000;<br>
-Sposób 2<br>
-używając zapisu postaci:<br> 
-nazwa_obiektu[nazwa_właściwości];<br>
-np. auto[cena]=25000;<br>
+        1. Rodzaje „filozofii” programowania.<br>
+    <li>Programowanie strukturalne<br>
+    <li>Programowanie obiektowe</li><br>
 
-     2.<h3> W jaki sposób można odwołać się do pól (właściwości) i metod?</h3>
+        2. Opisz paradygmat programowania strukturalnego. Założenia programowania
+strukturalnego.<br><br>
+paradygmat programowania opierający się na podziale kodu
+źródłowego programu na procedury i hierarchicznie ułożone bloki z wykorzystaniem struktur
+kontrolnych w postaci instrukcji wyboru i pętli.
+Programowanie strukturalne zwiększa czytelność i ułatwia analizę programów,<br> co stanowi znaczącą
+poprawę w stosunku do trudnego w utrzymaniu „spaghetti code” często wynikającego z użycia
+instrukcji goto.<br><br>
+<b>Założenia programowania strukturalnego</b><br>
+<li>Podzielone bloki kodu mają jeden punkt wejścia (mogą mieć wiele punktów wyjścia),<br>
+<li>Wykonywanie wyrażeń w określonej kolejności,<br>
+<li>Używanie instrukcji warunkowych (if, if else),<br>
+<li>Używanie pętli (for, while, do while),<br>
+<li>Unikanie instrukcji skoku (goto),<br>
+<li>Unikanie instrukcji break, continua,<br>
+<li>W programowaniu proceduralnym (strukturalne) funkcje i zmienne opisujące dany przedmiot
+nie są ze sobą powiązane.</li> <br>
+    3. Programowanie obiektowe definicja(angielski skrót, obiekty, stan, zachowanie,końcowa konkluzja czym jest programowanie obiektowe).<br><br>
+    Programowanie obiektowe (ang. object-oriented programming) — sposób programowania, w
+    którym programy definiuje się za pomocą:<br>
+    obiektów (obiekty powoływane są do życia wirtualnego przez programistę, mogą być kasowane
+    przez programistę) np. okienka w Windowsokienko jest obiektem,
+    obiekt ma jakiś stan (czyli dane, w programowaniu obiektowym nazywane najczęściej polami) np.
+    wielość okienka w Windows,
+    obiekt wykazuje pewne zachowanie (czyli posiada pewne procedury w programowaniu
+    obiektowym nazywane metody). Np. jest zdefiniowana metoda do zmiany wielkości okienka.
+    Czyli obiektowy program komputerowy wyrażony jest jako zbiór takich obiektów,
+    komunikujących się pomiędzy sobą w celu wykonywania zadań.<br><br>
+    4. Dlaczego stosujemy programowanie obiektowe?<br>
+    Jest to bardziej naturalne podejście przez programistę podczas tworzenia programów ponieważ
+    otaczający nas świat to różnego rodzaju przedmioty. Tworząc program komputerowy dokonujemy
+    pewnego ich odwzorowania rzeczywistości np. definiujemy obiekt samochód. Definiujemy pola
+    czyli jedo stan np. rok produkcji, marka, kolor. Definiujemy również metody czyli co umie np.
+    hamowanie, przyśpieszanie. Definicja obiektu jego metod i pól znajduje się w klasie. Następnie na
+    podstawie zdefiniowanego obiektu (może mieć pola oraz metody) powołujemy obiekt w pamięci
+    wirtualnej<br>
+    Programowanie obiektowe pozwala na lepsze gospodarowanie pamięciom komputera, ponieważ
+    gdy obiekt staje się zbędny możemy go usunąć co zwolni pamięc zajmowaną przez ten obiekt. W
+    programowaniu strukturalnym aby zwalniać pamięć konieczne było stosowanie dynamicznych
+    struktur danych np. stos czy kolejka.<br>
+    W programowaniu obiektowym dobrze napisna i przetestowana klasa pozwala na stosowaniu
+    przez innych programistów. Zaoszczędza to czas i środki pieniężne.<br><br>
+    5. Omów następujące pojęcia ( w krótkiej formie),<br>
 
-     Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych
-i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu,<br> którego są elementami
-(np. zmienną, która przechowuje dany obiekt), i kropkę.<br>
-np. console.log(samochod1.kolor);  wyświetla kolor obiektu samochod<br><br>
-
-    3. <h3>Wymień cechy charakterystyczne konstruktora.</h3>
-    Jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na
-rzecz tego obiektu,<br>
-nazywa się tak samo jak klasa,<br>
-nie zwraca żadnej wartości ,<br>
-może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do
-życia obiekt za pomocą operatora new. <br><br>
-
-    4. <h3>Konstruowanie obiektu na podstawie przykładu - obiekt ma trzy pola oraz jedną metodę.</h3>
-    var osoba_1 =<br>
-    {<br>
-    nazwisko : ‘Kowalski’,<br>
-    imie :’Jan’,<br>
-    zawod :’piekarz’,<br>
-    wyświetl :function ()<br>
-    {<br>
-    Document.write(this.nazwisko + ‘ ‘ + this.imie)<br>
-    }<br>
-    }<br><br>
-
-    5.<h3> Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h3>
-    metodą wypisz(). Właściwościom obiektu zostały przypisane wartości parametrów.<br> Użyte słowo
-    kluczowe this odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do
-    odpowiedniego pola tego obiektu.<br>
-    function klient(nazwisko_k,imie_k,zawod_k)
-    {
-    this.nazwisko=nazwisko_k;
-    this.imie=imie_k;
-    this.zawod=zawod_k;
-    wypisz = function ()
-     {
-     alert(this.nazwisko + ' ' + this.imie)
-     }
-    }
-    
-    6.<h3> Konstruktor w JS na podstawie przykładu wraz z opisem.</h3>
-    Temat: Definiowanie obiektów z użyciem konstruktora oraz tworzenie nowego obiektu.<br>
-    W poniższym przykładzie wygenerujemy więc dwa nowe obiekty – „auto” i „osoba”, wykorzystamy je
-    do zgromadzenia odpowiednich informacji, po czym te ostatnie wyświetlimy na ekranie komputera:<br>
-    function auto(marka,rok,cena,wlasciciel)<br>
-    {<br>
-    this.marka=marka;<br>
-    this.rok=rok;<br>
-    this.cena=cena;
-    this.wlasciciel=wlasciciel;
-    }
-    function osoba(imie,nazwisko)
-    {
-    this.nazwisko=nazwisko;
-    this.imie=imie;
-    }
-    posiadacz=new osoba("Jan","Kowalski");
-    bryka=new auto("Ferrari",2003,200000,posiadacz);
-    document.write("Marka: "+ bryka.marka +" rocznik: "+ bryka.rok +" cena: "+ bryka.cena);
-    document.write("<br>Wlasciciel: "+ bryka.wlasciciel.imie +" "+ bryka.wlasciciel.nazwisko);
-    Uwaga1
-    Konstruktor obiektu przypomina zwykłą funkcję.
-    Uwaga2
-    Słowo kluczowe new służy do tworzenia obiektu na podstawie konstruktora.
-    <h3>7. Znaczenie słowa kluczowego New wraz z przykładem.</h3>
-    Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new.
-Przykład:
-var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');
-var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
-Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.
-    8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem ( szczególnie ważny tekst pogrubiony).
-    Właściwość prototype
-Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości prototype
-Przykład
-function klient()
-{
-this.nazwisko='Bielski';
-this.imie='Paweł';
-}
-klient.prototype.pisz_dane = function ()
- {
- document.write(this.nazwisko + ' ' + this.imie)
- }
-klient.prototype.zawod = 'kierowca';
-var osoba1 = new klient();
-osoba1.pisz_dane();
+    <li>Klasa<br>
+Klasa rodzaj foremki, która opisuje nam jak będą wyglądać tworzone na jej podstawie nowe
+obiekty. Klasa jest to złożony typ będący opisem (definicją) obiektu/obiektów wraz z definicją pól i
+metod obiektów.
+<li>Obiekt<br>
+Instancja (byt, twór) który powstał na podstawie klasy. Czyli Obiekty są konstrukcjami
+programistycznymi mającymi tak zwane właściwości (inaczej pola obiektu), którymi mogą być
+zmienne lub inne obiekty. Z obiektami powiązane są funkcje wykonujące operacje na ich
+właściwościach, nazywane metodami.
+Właściwość<br>
+Własność obiektu, np. kolor.
+<li>Metoda<br>
+Zdolność (czynność) którą umie wykonywać obiekt, np. chodzenie (idź). Realizowane w postaci
+konstrukcji podobnej do funkcji.
+<li>Konstruktor<br>
+Metoda wywoływana w momencie inicjalizacji obiektu. np. tworzymy obiekt a wraz z tworzeniem
+obiektu uruchomi się metoda, która nada np. Imię i Nazwisko.
+<li>Dziedziczenie<br>
+Klasa może dziedziczyć własności od innej klasy. Tworzymy klasę na podstawie innej klasy
+pobierając od „rodzica” właściwości i metody, może dopisać nowe pola i nowe metody.
+<li>Hermetyzacja<br>
+Wewnątrz ciała klasy znajdują się pola i metody. Część pól i metod można odpowiednio ukryć przed
+"zewnętrznym światem" klasy tak jak to ma miejsce z przedmiotami ze świata rzeczywistego.
+<li>Polimorfizm <br>
+Polimorfizm czyli wielopastaciowość. Oznacza to, że dany obiekt może zmieniać swoją postać w
+zależności od potrzeb. Może to być realizowane w formie metody wywoływanej z różną ilością
+parametrów. Tak więc utorzony obiekt może być traktowany polimorficznie bo zachowuje się różnie
+w zależności od sposobu uruchamiania jego metody.</li>
     </body>
 </html>
