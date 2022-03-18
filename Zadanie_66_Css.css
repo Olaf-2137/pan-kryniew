@@ -1,0 +1,22 @@
+p#akapit1{
+font-size:21pt;
+}
+
+p#akapit2{
+font-size:19pt;
+}
+
+p#akapit1::first-letter{
+font-size: 114pt;
+color:blue;
+}
+
+p#akapit2::first-letter{
+font-size: 114pt
+color:yellow;
+}
+
+#blok3
+{
+color:gold
+}
