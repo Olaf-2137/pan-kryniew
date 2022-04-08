@@ -1,0 +1,85 @@
+<<html>
+<head>
+<title>
+pokaz formularza
+</title>
+<script language="JavaScript">
+function setfocus()
+{
+document.jeden.txt1.focus(); return;
+}
+function test1(form)
+{
+if (form.txt1.value == "")
+{
+alert("Podaj ciąg znaków!")
+}
+else
+{
+alert("Cześć "+form.txt1.value+" ! Informacja poprawna!");
+}
+}
+function test2(form)
+{
+if (form.txt2.value == "" || form.txt2.value.indexOf('@', 0) == -1)
+{
+alert("Niepoprawny adres poczty elektronicznej!");
+}
+else
+{
+alert("OK!");
+}
+}
+function test_pesel(form){
+	if (form.pesel_kowalski.value.length == 11) {
+		alert("Pesel jest zły!");
+		
+		let l = []
+		for (let i = 0; i<11;i++) {
+		l.push(parseInt(form.pesel_kowalski.value[i]));
+		}
+		}
+		}
+</script>
+</head>
+<body onLoad="setfocus()">
+
+
+<form name="Imie">
+Wpisz swoje nazwisko:<br>
+<input type="text" name="txt1">
+<input type="button" name="button1" value="Test" onClick="test1(this.form)">
+</form>
+
+
+<form name="Email">
+Wpisz adres swojej poczty elektronicznej:<br>
+<input type="text" name="txt2">
+<input type="button" name="button2" value="Test" onClick="test2(this.form)">
+</form>
+
+
+<form name="pesel">
+Wpisz numer PESEL:<br>
+<input type="text" name="pesel_kowalski">
+<input type="button" name="button3" value="Test" onClick="test_pesel(this.form)">
+</form>
+
+
+<form name="NIP">
+Wpisz numer NIP:<br>
+<input type="text" name="NIP_Banach">
+<input type="button" name="button3" value="Test" onClick="test_NIP(this.form)">
+</form>
+
+<form method=post action="mailto:dowolny@mail.pl">
+<h3>Czy podoba Ci się ta strona ?</h3>
+<input name="choice" type="radio" value="1">Tak<BR>
+<input name="choice" type="radio" value="2" checked>Może być<BR>
+<input name="choice" type="radio" value="3">Badziewie!<BR>
+<input name="submit" type="submit" value="Wyślij odpowiedź">
+</form>
+
+
+</body>
+</html>
